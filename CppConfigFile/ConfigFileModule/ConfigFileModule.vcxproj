@@ -20,7 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\GenericEntry.h" />
-    <ClInclude Include="Headers\GenericEntryHelpers.h" />
+    <ClInclude Include="Headers\StringHelpers.h" />
+    <ClInclude Include="Headers\GenericHashMapHelpers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Tests\Test.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

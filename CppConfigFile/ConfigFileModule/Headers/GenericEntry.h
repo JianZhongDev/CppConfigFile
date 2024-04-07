@@ -20,7 +20,7 @@
 #include<type_traits>
 #include<assert.h>
 
-#include "GenericEntryHelpers.h"
+#include "StringHelpers.h"
 
 
 // Base type of generic entry

@@ -12,8 +12,16 @@
     <ClInclude Include="Headers\GenericEntry.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\GenericEntryHelpers.h">
+    <ClInclude Include="Headers\StringHelpers.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\GenericHashMapHelpers.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Tests\Test.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
