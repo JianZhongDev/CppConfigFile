@@ -203,6 +203,7 @@ std::string helper_backward_oneway_clean_chars(
 }
 
 
+// clean chars in rm_char at two ends of the string
 std::string helper_bothside_clean_chars(
 	const std::string& src_string,
 	const std::unordered_set<char>& rm_chars
