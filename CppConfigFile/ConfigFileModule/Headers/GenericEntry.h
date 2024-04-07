@@ -259,7 +259,7 @@ public:
 // Entry with int vector
 class VectorIntEntry : public VectorPrimitiveTypeEntry<int> {
 public:
-	VectorIntEntry(const std::vector<int>& data = std::vector<int>{ 0 }) {
+	VectorIntEntry(const std::vector<int>& data = { 0 }) {
 		this->type_name = "vector_int";
 		this->data = std::vector<int>(data);
 	}
@@ -269,7 +269,7 @@ public:
 // Entry with unsigned int vector
 class VectorUIntEntry : public VectorPrimitiveTypeEntry<unsigned int> {
 public:
-	VectorUIntEntry(const std::vector<unsigned int>& data = std::vector<unsigned int>{ 0 }) {
+	VectorUIntEntry(const std::vector<unsigned int>& data = { 0 }) {
 		this->type_name = "vector_int";
 		this->data = std::vector<unsigned int>(data);
 	}
@@ -279,7 +279,7 @@ public:
 // Entry with float vector
 class VectorFloatEntry : public VectorPrimitiveTypeEntry<float> {
 public:
-	VectorFloatEntry(const std::vector<float>& data = std::vector<float>{ 0.0 }) {
+	VectorFloatEntry(const std::vector<float>& data = { 0.0 }) {
 		this->type_name = "vector_float";
 		this->data = std::vector<float>(data);
 	}

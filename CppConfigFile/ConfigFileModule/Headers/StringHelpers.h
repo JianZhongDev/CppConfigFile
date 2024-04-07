@@ -164,6 +164,18 @@ void helper_split_entrystr_into_type_name_val(
 }
 
 
+// pack type name value string into one string
+std::string helper_pack_type_name_val_string(
+	const std::string& type_string,
+	const std::string& name_string,
+	const std::string& val_string,
+	const std::string& type_name_dl = " ",
+	const std::string& name_val_dl = "="
+) {
+	return type_string + type_name_dl + name_string + name_val_dl + val_string;
+}
+
+
 // clean chars in rm_char from start_idx, moving left to right
 std::string helper_forward_oneway_clean_chars(
 	const std::string& src_string,
@@ -191,12 +203,33 @@ std::string helper_backward_oneway_clean_chars(
 }
 
 
+std::string helper_bothside_clean_chars(
+	const std::string& src_string,
+	const std::unordered_set<char>& rm_chars
+) {
+	std::size_t srcstr_len = src_string.size();
+	std::size_t start_idx = 0;
+	std::size_t end_idx = srcstr_len;
+
+	for (start_idx = 0; start_idx < srcstr_len; ++start_idx) {
+		if (rm_chars.find(src_string[start_idx]) == rm_chars.end()) break;
+	}
+	for (end_idx = srcstr_len; end_idx > 0; --end_idx) {
+		if (rm_chars.find(src_string[end_idx - 1]) == rm_chars.end()) break;
+	}
+	if (end_idx < start_idx) {
+		return "";
+	}
+	return src_string.substr(start_idx, end_idx - start_idx);
+}
+
+
 // extract entry strings from complicated strings
 std::vector<std::string> helper_extract_entrystr(
 	const std::string& src_string,
-	const std::string& entry_stop_str, //string indicates the end of an entry string
-	std::unordered_map<std::string, std::string> ignore_left_to_right_map, //string parts between "left" and "right" to ignore
-	std::unordered_map<std::string, std::string> include_left_to_right_map //string parts between "left" and "right" to include
+	const std::string& entry_stop_str = ";", //string indicates the end of an entry string
+	std::unordered_map<std::string, std::string> ignore_left_to_right_map = { {"//", "\n"}, {"/*", "*/"} }, //string parts between "left" and "right" to ignore
+	std::unordered_map<std::string, std::string> include_left_to_right_map = { {"\"", "\""} } //string parts between "left" and "right" to include
 ) {
 	std::size_t slow_idx = 0;
 	std::size_t fast_idx = 0;

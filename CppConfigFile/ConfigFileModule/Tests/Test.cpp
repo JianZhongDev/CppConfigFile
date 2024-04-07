@@ -14,9 +14,11 @@
 
 #include "../Headers/StringHelpers.h"
 #include"../Headers/GenericEntry.h"
+#include "../Headers/GenericHashMapHelpers.h"
 
 
 #define MAIN // enable or disable main method in this file
+
 
 // Quick test for string extraction function
 static void test_string_extract_func() {
@@ -67,9 +69,34 @@ static void test_generic_entries() {
 	test_map["test_vecfloat01"] = &test_vecfloat01;
 	test_map["test_vecfloat02"] = &test_vecfloat02;
 
+	test_map["test_uint02"]->read_val_string("4");
+	test_map["test_str02"]->read_val_string("\"some random text\"");
+	test_map["test_vecfloat02"]->read_val_string("{  -0.1,-0.2, -0.3, -0.4, -0.5}");
+
+
+	save_genhashmap_to_txt(
+		test_map,
+		"./test.txt",
+		std::ios_base::out,
+		" ",
+		" = ",
+		";",
+		{"/*", "*/"},
+		"This is a test config file.\n Hello.\n"
+	);
+
 	test_map["test_uint01"]->read_val_string("3");
 	test_map["test_str01"]->read_val_string("\"alala\"");
 	test_map["test_vecfloat01"]->read_val_string("{  1.1,1.2, 1.3, 1.4, 1.5,  }");
+
+	update_genhashmap_from_txt(
+		test_map,
+		"./test.txt",
+		std::ios_base::in,
+		" ",
+		"=",
+		";"
+	);
 
 	for (const auto itr : test_map) {
 		std::string tmp_typename;
@@ -89,6 +116,7 @@ static void test_generic_entries() {
 		std::cout << itr << ", ";
 	}
 	std::cout << "}" << std::endl;
+
 }
 
 
