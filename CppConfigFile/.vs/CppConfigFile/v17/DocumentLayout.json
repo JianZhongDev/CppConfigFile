@@ -1,54 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\VisualStudio\\CppConfigFile\\CppConfigFile\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A98DDBBA-2EE3-46E8-AD2C-3CE8888919EB}|Project1\\Project1.vcxproj|E:\\VisualStudio\\CppConfigFile\\CppConfigFile\\Project1\\GenericEntry.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A98DDBBA-2EE3-46E8-AD2C-3CE8888919EB}|Project1\\Project1.vcxproj|solutionrelative:Project1\\GenericEntry.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A98DDBBA-2EE3-46E8-AD2C-3CE8888919EB}|Project1\\Project1.vcxproj|E:\\VisualStudio\\CppConfigFile\\CppConfigFile\\Project1\\GenericEntryHelpers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A98DDBBA-2EE3-46E8-AD2C-3CE8888919EB}|Project1\\Project1.vcxproj|solutionrelative:Project1\\GenericEntryHelpers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GenericEntryHelpers.h",
-              "DocumentMoniker": "E:\\VisualStudio\\CppConfigFile\\CppConfigFile\\Project1\\GenericEntryHelpers.h",
-              "RelativeDocumentMoniker": "Project1\\GenericEntryHelpers.h",
-              "ToolTip": "E:\\VisualStudio\\CppConfigFile\\CppConfigFile\\Project1\\GenericEntryHelpers.h",
-              "RelativeToolTip": "Project1\\GenericEntryHelpers.h",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAE0AAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-07T02:55:08.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GenericEntry.h",
-              "DocumentMoniker": "E:\\VisualStudio\\CppConfigFile\\CppConfigFile\\Project1\\GenericEntry.h",
-              "RelativeDocumentMoniker": "Project1\\GenericEntry.h",
-              "ToolTip": "E:\\VisualStudio\\CppConfigFile\\CppConfigFile\\Project1\\GenericEntry.h",
-              "RelativeToolTip": "Project1\\GenericEntry.h",
-              "ViewState": "AQIAAOEAAAAAAAAAAAAAAOwAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-07T02:53:22.964Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
