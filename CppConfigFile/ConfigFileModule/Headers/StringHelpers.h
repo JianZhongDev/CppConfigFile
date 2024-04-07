@@ -215,6 +215,7 @@ std::vector<std::string> helper_extract_entrystr(
 		include_left_lens.insert(itr.first.size());
 	}
 
+	// itrate through src_string to find all entry strings
 	std::vector<std::string> entry_strs;
 	while (fast_idx < srcstr_len) {
 		// check string between "left" and "right" to include
