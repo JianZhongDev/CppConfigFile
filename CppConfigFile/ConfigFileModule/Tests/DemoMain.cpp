@@ -64,6 +64,16 @@ void main() {
 	((ULongLongEntry*)test_genhashmap["ulonglong02"])->set(1500);
 	((StringEntry*)test_genhashmap["string02"])->set(std::string("some random string"));
 
+	std::vector<float> tmp_float_vec;
+	((VectorFloatEntry*)test_genhashmap["vector_float01"])->get(&tmp_float_vec);
+	std::cout << "--- get float vector START ---" << std::endl;
+	std::cout << "tmp_float_vec = {";
+	for (const auto& val : tmp_float_vec) {
+		std::cout << val << ", ";
+	}
+	std::cout << "}" << std::endl;
+	std::cout << std::endl;
+
 	std::cout << "--- genhashmap values START ---" << std::endl;
 	for (const auto& key_val_pair : test_genhashmap) {
 		std::string cur_name_str = key_val_pair.first;
