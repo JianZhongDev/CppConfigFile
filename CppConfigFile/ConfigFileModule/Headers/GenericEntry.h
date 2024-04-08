@@ -22,6 +22,8 @@
 
 #include "StringHelpers.h"
 
+#ifndef GENERICENTRY_H
+#define GENERICENTRY_H
 
 // Base type of generic entry
 class GenericEntry {
@@ -284,3 +286,5 @@ public:
 		this->data = std::vector<float>(data);
 	}
 };
+
+#endif

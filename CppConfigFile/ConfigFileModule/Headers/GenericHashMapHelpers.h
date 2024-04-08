@@ -77,9 +77,9 @@ errflag_t update_genhashmap_from_txt(
 	const std::string& type_name_dl = " ",
 	const std::string& name_val_dl = "=",
 	const std::string& entry_stop_str = ";",
-	std::unordered_map<std::string, std::string> ignore_left_to_right_map = {{"//", "\n"}, {"/*", "*/"}},
-	std::unordered_map<std::string, std::string> include_left_to_right_map = {{"\"", "\""}},
-	std::unordered_set<char> rm_chars = {' ', '\n', '\t'}
+	const std::unordered_map<std::string, std::string>& ignore_left_to_right_map = {{"//", "\n"}, {"/*", "*/"}},
+	const std::unordered_map<std::string, std::string>& include_left_to_right_map = {{"\"", "\""}},
+	const std::unordered_set<char>& rm_chars = {' ', '\n', '\t'}
 ) {
 	errflag_t err_flag = 0;
 	std::ifstream src_file(src_file_path, src_file_openmode);
@@ -151,6 +151,20 @@ errflag_t update_genhashmap_from_txt(
 	}
 
 	return err_flag;
+}
+
+
+// delete all the elements in a generic hash map
+errflag_t clear_genhashmap(
+	std::unordered_map<std::string, GenericEntry*>& gen_hashmap
+) {
+	// iterate through the hash map to release all the entries
+	for (auto key_val_pair : gen_hashmap) {
+		delete key_val_pair.second;
+	}
+	gen_hashmap.clear();
+
+	return 1;
 }
 
 

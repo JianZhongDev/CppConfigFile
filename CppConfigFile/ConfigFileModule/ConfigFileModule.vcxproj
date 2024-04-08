@@ -20,10 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\GenericEntry.h" />
+    <ClInclude Include="Headers\GenericHashMap.h" />
+    <ClInclude Include="Headers\GenericHashMapIOs.h" />
     <ClInclude Include="Headers\StringHelpers.h" />
     <ClInclude Include="Headers\GenericHashMapHelpers.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Tests\DemoMain.cpp" />
     <ClCompile Include="Tests\Test.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

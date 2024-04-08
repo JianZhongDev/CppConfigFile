@@ -16,6 +16,8 @@
 #include<string>
 #include<assert.h>
 
+#ifndef STRINGHELPERS_H
+#define STRINGHELPERS_H
 
 // function used to extract strings between string between left and right enclosures
 // src_string = "some string" + "start_enclosure" + "result_string" + "end_enclosure" + "some_string"
@@ -292,3 +294,5 @@ std::vector<std::string> helper_extract_entrystr(
 
 	return entry_strs;
 }
+
+#endif

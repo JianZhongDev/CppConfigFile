@@ -18,9 +18,18 @@
     <ClInclude Include="Headers\GenericHashMapHelpers.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\GenericHashMapIOs.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\GenericHashMap.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tests\Test.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\DemoMain.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>

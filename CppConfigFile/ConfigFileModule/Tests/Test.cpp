@@ -12,13 +12,13 @@
 #include <vector>
 #include<unordered_map>
 
+//#define MAIN // enable or disable main method in this file
+
+#ifdef MAIN
+
 #include "../Headers/StringHelpers.h"
-#include"../Headers/GenericEntry.h"
+#include "../Headers/GenericEntry.h"
 #include "../Headers/GenericHashMapHelpers.h"
-
-
-#define MAIN // enable or disable main method in this file
-
 
 // Quick test for string extraction function
 static void test_string_extract_func() {
@@ -120,7 +120,6 @@ static void test_generic_entries() {
 }
 
 
-#ifdef MAIN
 // main method for test
 void main() {
 	test_string_extract_func();
