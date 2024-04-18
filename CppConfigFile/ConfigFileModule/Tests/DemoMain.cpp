@@ -64,16 +64,6 @@ void main() {
 	((ULongLongEntry*)test_genhashmap["ulonglong02"])->set(1500);
 	((StringEntry*)test_genhashmap["string02"])->set(std::string("some random string"));
 
-	std::vector<float> tmp_float_vec;
-	((VectorFloatEntry*)test_genhashmap["vector_float01"])->get(&tmp_float_vec);
-	std::cout << "--- get float vector START ---" << std::endl;
-	std::cout << "tmp_float_vec = {";
-	for (const auto& val : tmp_float_vec) {
-		std::cout << val << ", ";
-	}
-	std::cout << "}" << std::endl;
-	std::cout << std::endl;
-
 	std::cout << "--- genhashmap values START ---" << std::endl;
 	for (const auto& key_val_pair : test_genhashmap) {
 		std::string cur_name_str = key_val_pair.first;
@@ -84,6 +74,26 @@ void main() {
 		std::cout << cur_type_str << " " << cur_name_str << " = " << cur_val_str << std::endl;
 	}
 	std::cout << "--- genhashmap values END ---" << std::endl;
+	std::cout << std::endl;
+
+	// try to get some of the values
+	std::vector<float> tmp_float_vec;
+	((VectorFloatEntry*)test_genhashmap["vector_float01"])->get(&tmp_float_vec);
+	std::string tmp_string;
+	((StringEntry*)test_genhashmap["string02"])->get(&tmp_string);
+	unsigned long long tmp_ulonglong;
+	((ULongLongEntry*)test_genhashmap["ulonglong01"])->get(&tmp_ulonglong);
+
+
+	std::cout << "--- get values START ---" << std::endl;
+	std::cout << "tmp_float_vec = {";
+	for (const auto& val : tmp_float_vec) {
+		std::cout << val << ", ";
+	}
+	std::cout << "}" << std::endl;
+	std::cout << "tmp_string = " << tmp_string << std::endl;
+	std::cout << "tmp_ulonglong = " << tmp_ulonglong << std::endl;
+	std::cout << "--- get values END ---" << std::endl;
 	std::cout << std::endl;
 
 	// update values according to txt configuration file
