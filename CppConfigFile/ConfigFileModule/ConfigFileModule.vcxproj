@@ -26,6 +26,7 @@
     <ClInclude Include="Headers\GenericHashMapHelpers.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Tests\BlogDemoMain.cpp" />
     <ClCompile Include="Tests\DemoMain.cpp" />
     <ClCompile Include="Tests\Test.cpp" />
   </ItemGroup>

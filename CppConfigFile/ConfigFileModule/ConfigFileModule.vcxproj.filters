@@ -32,5 +32,8 @@
     <ClCompile Include="Tests\DemoMain.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
+    <ClCompile Include="Tests\BlogDemoMain.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
