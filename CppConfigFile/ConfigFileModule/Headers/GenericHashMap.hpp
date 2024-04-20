@@ -14,7 +14,7 @@
 #include<vector>
 #include<unordered_map>
 
-#include "../Headers/GenericEntry.h"
+#include "../Headers/GenericEntry.hpp"
 
 #ifndef GENERICHASHMAP_H
 #define GENERICHASHMAP_H

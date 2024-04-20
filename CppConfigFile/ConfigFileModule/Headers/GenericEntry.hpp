@@ -20,7 +20,7 @@
 #include<type_traits>
 #include<assert.h>
 
-#include "StringHelpers.h"
+#include "StringHelpers.hpp"
 
 #ifndef GENERICENTRY_H
 #define GENERICENTRY_H

@@ -16,9 +16,9 @@
 
 #ifdef MAIN
 
-#include "../Headers/StringHelpers.h"
-#include "../Headers/GenericEntry.h"
-#include "../Headers/GenericHashMapHelpers.h"
+#include "../Headers/StringHelpers.hpp"
+#include "../Headers/GenericEntry.hpp"
+#include "../Headers/GenericHashMapHelpers.hpp"
 
 // Quick test for string extraction function
 static void test_string_extract_func() {

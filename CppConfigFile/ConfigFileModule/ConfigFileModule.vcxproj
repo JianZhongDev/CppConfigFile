@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Headers\GenericEntry.h" />
-    <ClInclude Include="Headers\GenericHashMap.h" />
-    <ClInclude Include="Headers\GenericHashMapIOs.h" />
-    <ClInclude Include="Headers\StringHelpers.h" />
-    <ClInclude Include="Headers\GenericHashMapHelpers.h" />
+    <ClInclude Include="Headers\GenericEntry.hpp" />
+    <ClInclude Include="Headers\GenericHashMap.hpp" />
+    <ClInclude Include="Headers\GenericHashMapIOs.hpp" />
+    <ClInclude Include="Headers\StringHelpers.hpp" />
+    <ClInclude Include="Headers\GenericHashMapHelpers.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tests\BlogDemoMain.cpp" />

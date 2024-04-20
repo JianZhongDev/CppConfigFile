@@ -16,9 +16,10 @@
 
 #ifdef MAIN
 
-#include "../Headers/GenericEntry.h"
-#include "../Headers/GenericHashMap.h"
-#include "../Headers/GenericHashMapIOs.h"
+#include "../Headers/GenericEntry.hpp"
+#include "../Headers/GenericHashMap.hpp"
+#include "../Headers/GenericHashMapIOs.hpp"
+#include "../Headers/GenericHashMapHelpers.hpp"
 
 void main() {
 	GenHashMap test_genhashmap;
@@ -115,6 +116,8 @@ void main() {
 	std::cout << "--- genhashmap values END ---" << std::endl;
 	std::cout << std::endl;
 
+	// release generic entries and clear gen hashmap
+	clear_genhashmap(test_genhashmap);
 }
 
 #endif

@@ -17,8 +17,8 @@
 #include<assert.h>
 #include<streambuf>
 
-#include "GenericEntry.h"
-#include "StringHelpers.h"
+#include "GenericEntry.hpp"
+#include "StringHelpers.hpp"
 
 typedef int errflag_t;
 

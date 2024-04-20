@@ -17,7 +17,7 @@
 #include<assert.h>
 #include<streambuf>
 
-#include"GenericHashMapHelpers.h"
+#include"GenericHashMapHelpers.hpp"
 
 #ifndef GENERICHASHMAPIOS_H
 #define GENERICHASHMAPIOS_H
