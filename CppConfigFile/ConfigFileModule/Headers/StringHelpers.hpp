@@ -284,7 +284,7 @@ std::vector<std::string> helper_extract_entrystr(
 			}
 		}
 		if (fast_idx + entry_stop_str_len > srcstr_len) break; // reach the end of src_string
-		// Found complete entry string
+		// found complete entry string
 		if (src_string.substr(fast_idx, entry_stop_str_len) == entry_stop_str) {
 			entry_strs.push_back(src_string.substr(slow_idx, fast_idx - slow_idx));
 			slow_idx = fast_idx + 1;
