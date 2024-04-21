@@ -1,3 +1,4 @@
 /*This is the test configuration file for Vision Tech Insights blog.*/
+int int_val = 1;
 string string_val = "Welcome to Vision Tech Insights!";
 vector_float vector_float_val = {0.100000,0.200000,0.300000,0.400000,0.500000};

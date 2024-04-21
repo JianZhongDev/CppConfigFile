@@ -28,6 +28,7 @@ void main() {
 	GenHashMapIOTxt test_io_txt;
 
 	// initialize generic hash map
+	test_genhashmap["int_val"] = new IntEntry(1);
 	test_genhashmap["string_val"] = new StringEntry("Welcome to Vision Tech Insights!");
 	test_genhashmap["vector_float_val"] = new VectorFloatEntry({ 0.1, 0.2, 0.3, 0.4, 0.5 });
 
@@ -62,6 +63,7 @@ void main() {
 	// save generic hash map into a text file
 	std::cout << "====== Set values in gen hashmap ======" << std::endl << std::endl;
 	// try to change some of the values
+	((IntEntry*)test_genhashmap["int_val"])->set(-1);
 	((StringEntry*)test_genhashmap["string_val"])->set(std::string("Hello world!"));
 	((VectorFloatEntry*)test_genhashmap["vector_float_val"])->set(std::vector<float>{-0.1, -0.2, -0.3});
 
@@ -79,12 +81,15 @@ void main() {
 
 	// try to get value from genhashmap
 	std::cout << "====== Get values from gen hashmap ======" << std::endl << std::endl;
+	int tmp_int;
+	((IntEntry*)test_genhashmap["int_val"])->get(&tmp_int);
 	std::string tmp_string;
 	((StringEntry*)test_genhashmap["string_val"])->get(&tmp_string);
 	std::vector<float> tmp_float_vec;
 	((VectorFloatEntry*)test_genhashmap["vector_float_val"])->get(&tmp_float_vec);
 
 	std::cout << "--- get values START ---" << std::endl;
+	std::cout << "tmp_int = " << tmp_int << std::endl;
 	std::cout << "tmp_float_vec = {";
 	for (int i_val = 0; i_val < tmp_float_vec.size(); i_val++) {
 		std::cout << tmp_float_vec[i_val];
