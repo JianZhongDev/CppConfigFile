@@ -62,7 +62,9 @@ errflag_t save_genhashmap_to_txt(
 		err_flag = 1;
 	}
 	else {
-		std::cout << "ERR:\t Unable to open file. File path = " + dst_file_path << std::endl;
+		//std::cout << "ERR:\t Unable to open file. File path = " + dst_file_path << std::endl;
+		std::string err_msg = "ERR:\t Unable to open file. File path = " + dst_file_path + "\n";
+		std::cout << err_msg;
 		err_flag = -1;
 	}
 	return err_flag;
@@ -136,17 +138,23 @@ errflag_t update_genhashmap_from_txt(
 					gen_hashmap[name_string]->read_val_string(value_string);
 				}
 				else {
-					std::cout << "ERR:\tType mismatch! " + type_string + " <--> " + hp_typename + "\n";
+					//std::cout << "ERR:\tType mismatch! " + type_string + " <--> " + hp_typename + "\n";
+					std::string err_string = "ERR:\tType mismatch! " + type_string + " <--> " + hp_typename + "\n";
+					std::cout << err_string;
 				}
 			}
 			else {
-				std::cout << "ERR:\tName not found! " + name_string + "\n";
+				//std::cout << "ERR:\tName not found! " + name_string + "\n";
+				std::string err_string = "ERR:\tName not found! " + name_string + "\n";
+				std::cout << err_string;
 			}
 		}
 		err_flag = 1;
 	}
 	else {
-		std::cout << "ERR:\t Unable to open file. File path = " + src_file_path << std::endl;
+		//std::cout << "ERR:\t Unable to open file. File path = " + src_file_path << std::endl;
+		std::string err_string = "ERR:\t Unable to open file. File path = " + src_file_path + "\n";
+		std::cout << err_string;
 		err_flag = -1;
 	}
 
