@@ -18,6 +18,7 @@
 #include<streambuf>
 
 #include "GenericEntry.hpp"
+#include "GenericHashMap.hpp"
 #include "StringHelpers.hpp"
 
 typedef int errflag_t;
@@ -25,7 +26,7 @@ typedef int errflag_t;
 
 // save generic hash map entries to configuration text file
 errflag_t save_genhashmap_to_txt(
-	const std::unordered_map<std::string, GenericEntry*>& gen_hashmap,
+	const GenHashMap& gen_hashmap,
 	const std::string& dst_file_path,
 	std::ios_base::openmode dst_file_openmode = std::ios_base::out,
 	const std::string& type_name_dl = " ",
@@ -73,7 +74,7 @@ errflag_t save_genhashmap_to_txt(
 
 // update generic hash map entries according to configuration text file
 errflag_t update_genhashmap_from_txt(
-	std::unordered_map<std::string, GenericEntry*>& gen_hashmap,
+	GenHashMap& gen_hashmap,
 	const std::string& src_file_path,
 	std::ios_base::openmode src_file_openmode = std::ios_base::in,
 	const std::string& type_name_dl = " ",
@@ -164,7 +165,7 @@ errflag_t update_genhashmap_from_txt(
 
 // delete all the elements in a generic hash map
 errflag_t clear_genhashmap(
-	std::unordered_map<std::string, GenericEntry*>& gen_hashmap
+	GenHashMap& gen_hashmap
 ) {
 	// iterate through the hash map to release all the entries
 	for (auto key_val_pair : gen_hashmap) {

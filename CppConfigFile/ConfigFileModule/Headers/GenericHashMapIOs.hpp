@@ -18,6 +18,7 @@
 #include<streambuf>
 
 #include"GenericHashMapHelpers.hpp"
+#include"GenericHashMap.hpp"
 
 #ifndef GENERICHASHMAPIOS_H
 #define GENERICHASHMAPIOS_H
@@ -35,7 +36,7 @@ public:
 
 	// save generic hash map to file
 	errflag_t save_to_file(
-		const std::unordered_map<std::string, GenericEntry*>& gen_hashmap,
+		const GenHashMap& gen_hashmap,
 		const std::string& dst_file_path,
 		std::ios_base::openmode dst_file_openmode = std::ios_base::out,
 		const std::string& head_message = ""
@@ -55,7 +56,7 @@ public:
 
 	// load generic hash map 
 	errflag_t update_from_file(
-		std::unordered_map<std::string, GenericEntry*>& gen_hashmap,
+		GenHashMap& gen_hashmap,
 		const std::string& src_file_path,
 		std::ios_base::openmode src_file_openmode = std::ios_base::in
 	) {
