@@ -20,7 +20,7 @@
 #ifndef GENERICHASHMAP_H
 #define GENERICHASHMAP_H
 
-#define ORDERED_MAP
+// #define ORDERED_MAP
 
 #ifdef ORDERED_MAP
 typedef std::map<std::string, GenericEntry*> GenHashMap;
