@@ -25,9 +25,9 @@
 #ifdef ORDERED_MAP
 typedef std::map<std::string, GenericEntry*> GenHashMap;
 #else
+//typedef std::unordered_map<std::string, GenericEntry*> GenHashMap;
 typedef std::unordered_map<std::string, GenericEntry*> GenHashMap;
 #endif
-
 
 #endif
 
